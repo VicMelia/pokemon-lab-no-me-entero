@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
     fun showPokemonData(pokemon: Pokemon) {
         pokemon.let {
             with (binding) {
-                nameTextView.text = it.name
-                weightTextView.text = (it.weight / 10f).toString()+" kg"
-                heightTextView.text = (it.height / 10f).toString()+" m"
+                textSpecies.text = it.name
+                textWeight.text = (it.weight / 10f).toString()+" kg"
+                textHeight.text = (it.height / 10f).toString()+" m"
             }
         }
     }
