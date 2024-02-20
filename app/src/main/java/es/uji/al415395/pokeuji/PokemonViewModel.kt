@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class PokemonViewModel {
+class PokemonViewModel:ViewModel() {
 
     var view: PokemonView? = null
         set(value) {
