@@ -1,5 +1,4 @@
 package es.uji.al415395.pokeuji
-
 import kotlinx.coroutines.Dispatchers
 import models.Pokemon
 import network.PokemonRepository

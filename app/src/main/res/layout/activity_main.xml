@@ -14,7 +14,7 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Pokemon Name"
+        android:text=""
         android:textSize="16dp"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:text="Search"
-        android:textSize="12dp"
+        android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@+id/pokemonName"
         app:layout_constraintTop_toTopOf="@+id/pokemonName" />
 
@@ -87,7 +87,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
         android:text="Show abilities"
-        android:textSize="12dp"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textSpecies" />
 
@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:text="Show types"
-        android:textSize="12dp"
+        android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@+id/buttonAbilites"
         app:layout_constraintTop_toTopOf="@+id/buttonAbilites" />
 
