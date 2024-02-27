@@ -29,6 +29,17 @@ class PokemonViewModel:ViewModel() {
         }
     }
 
+    /*
+    fun onPokemonSearchTypes(id: String) {
+        viewModelScope.launch(Dispatchers.Main) {
+            PokemonRepository.getTypes(id)
+                .onSuccess { pokemon = it }
+                .onFailure { view?.showSearchError(it) }
+        }
+    }
+    */
+
+
     private fun displayPokemon(pokemon: Pokemon) = view ?. apply {
         showPokemonData(pokemon)
     }

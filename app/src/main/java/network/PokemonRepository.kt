@@ -2,9 +2,12 @@ package network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import es.uji.al415395.pokeuji.species.Species
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import models.Abilities
 import models.Pokemon
+import models.Types
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -31,6 +34,41 @@ object PokemonRepository {
         Result.failure(e)
     }
 
+    suspend fun getTypes(id: String) = try {
+        withContext(Dispatchers.IO) {
+            val types = api.getTypes(id.lowercase())
+            with(types) {
+                Result.success(Types(id, name))
+            }
+        }
+    } catch (e: Exception) {
+        Result.failure(e)
+    }
+
+    suspend fun getAbilities(id: String) = try {
+        withContext(Dispatchers.IO) {
+            val abilities = api.getAbilities(id.lowercase())
+            with(abilities) {
+                Result.success(Abilities(id, name, isHidden, slot))
+            }
+        }
+    } catch (e: Exception) {
+        Result.failure(e)
+    }
+
+
+    /*
+    suspend fun getSpecies(id: String) = try {
+        withContext(Dispatchers.IO) {
+            val species = api.getSpecies(id.lowercase())
+            with(species) {
+                Result.success(Species(id, name))
+            }
+        }
+    } catch (e: Exception) {
+        Result.failure(e)
+    }
+    */
 
 
 }

@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity(), PokemonView {
 
             buttonAbilites.setOnClickListener {
                 //FUNCIÓN HABILIDADES
+
             }
             buttonTypes.setOnClickListener {
                 //FUNCIÓN TIPOS
@@ -54,9 +55,9 @@ class MainActivity : AppCompatActivity(), PokemonView {
         pokemon.let {
             with (binding) {
                 pokemonResult.text = it.name //he puesto esta linea para que salga el nombre arriba de la foto
-                textSpecies.text = it.name //it = pokemon
-                textWeight.text = (it.weight / 10f).toString()+" kg"
-                textHeight.text = (it.height / 10f).toString()+" m"
+                textSpecies.text = "Species: " + it.name //it = pokemon
+                textWeight.text = "Weight: " + (it.weight / 10f).toString()+" kg"
+                textHeight.text = "Height: " + (it.height / 10f).toString()+" m"
             }
         }
     }
