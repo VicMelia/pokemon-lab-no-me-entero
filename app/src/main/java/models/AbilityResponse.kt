@@ -1,9 +1,8 @@
 package models
 
-data class Abilities(
+data class AbilityResponse(
 
-    val name: String,
-    val url: String,
+    val ability: AbilityModel,
     val isHidden: Boolean,
     val slot: Int
 
